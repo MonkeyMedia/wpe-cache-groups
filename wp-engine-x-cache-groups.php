@@ -33,7 +33,7 @@ class monkey_cache_groups {
 			function get_cache_group() {
 				$headers = apache_response_headers();
 				if(array_key_exists('X-Cache-Group', $headers))
-					return $headers['X-Cache-Group']
+					return $headers['X-Cache-Group'];
 				else
 					return;
 			}
