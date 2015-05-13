@@ -28,6 +28,16 @@ class monkey_cache_groups {
 					return false;
 			}
 		}
+		
+		if(!function_exists('get_cache_group')) {
+			function get_cache_group() {
+				$headers = apache_response_headers();
+				if(array_key_exists('X-Cache-Group', $headers))
+					return $headers['X-Cache-Group']
+				else
+					return;
+			}
+		}
 	}
 }
 new monkey_cache_groups;
