@@ -22,7 +22,7 @@ class monkey_cache_groups {
 		if(!function_exists('is_cache_group')) {
 			function is_cache_group($group = '') {
 				$headers = apache_response_headers();
-				if(!empty($group) && array_key_exists('X-Cache-Group', $headers) && $headers['X-Cache-Group'] == $group)
+				if(array_key_exists('X-Cache-Group', $headers) && (empty($group) || $headers['X-Cache-Group'] == $group))
 					return true;
 				else
 					return false;
