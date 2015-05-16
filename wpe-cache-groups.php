@@ -21,7 +21,7 @@ class monkey_cache_groups {
 	function mcg_is_cache_group() {
 		if(!function_exists('is_cache_group')) {
 			function is_cache_group($group = '') {
-				$headers = apache_request_headers();
+				$headers = (is_user_logged_in() ? apache_response_headers() : apache_request_headers());
 				if(array_key_exists('X-Cache-Group', $headers) && (empty($group) || $headers['X-Cache-Group'] == $group))
 					return true;
 				else
@@ -31,7 +31,7 @@ class monkey_cache_groups {
 		
 		if(!function_exists('get_cache_group')) {
 			function get_cache_group() {
-				$headers = apache_request_headers();
+				$headers = (is_user_logged_in() ? apache_response_headers() : apache_request_headers());
 				if(array_key_exists('X-Cache-Group', $headers))
 					return $headers['X-Cache-Group'];
 				else
