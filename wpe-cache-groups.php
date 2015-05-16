@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: Monkey Cache Groups
+Plugin Name: WPE Cache Groups
 Plugin URI: 
-Description: Adds is_cache_group() function.
+Description: Adds is_cache_group() and get_cache_group() function.
 Version: 0.0.1
 Author: MonkeyMediaInc
-Author URI: 
+Author URI: http://www.monkeymediainc.com 
 License: 
 */
    
