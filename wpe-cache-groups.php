@@ -61,7 +61,7 @@ class monkey_cache_groups {
 		<form action="options.php" method="post">
 			<?php settings_fields($this->_class.'_options'); ?>
 			<?php do_settings_sections($this->_class.'_settings'); ?>
-			<input name="Submit" type="submit" value="<?php esc_attr_e('Save Changes'); ?>" />
+			<p class="submit"><input type="submit" value="<?php esc_attr_e('Save Changes'); ?>" class="button button-primary" id="submit" name="submit"></p>
 		</form>
 		<?php
 	}
