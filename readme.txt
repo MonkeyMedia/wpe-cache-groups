@@ -10,6 +10,9 @@ WPE Cache Groups is a plugin for WordPress. This plugin provides WordPress with 
 4. bot (most normal bots that you will ever see (google, bing, facebook, etc))
 5. bot-mobile (this works like "if mobile and if bot, cache as bot-mobile")
 6. mobile-maybe (new and edge case mobile devices)
+7. wptouch-
+8. wptouch-default
+9. Disqus
 
 ## Functions
 
